@@ -8,11 +8,11 @@ In general, I've attempted to keep all of the fields that are availalble while b
 
 In order to run this theme, you should be using [my fork of Ghost](https://github.com/carsondarling/Ghost), or you make similar changes. The theme depends on two custom Handlebars helpers, `cleanJSON` and `safe`.
 
-#### safe ([source](#))
+#### safe ([source](https://github.com/carsondarling/Ghost/blob/json-api/custom/helpers.js#L4))
 
 `safe` is a block-level helper that consumes HTML, and returns a JSON-safe string. The primary use is for formatting the content of each post.
 
-#### cleanJSON ([source](#))
+#### cleanJSON ([source](https://github.com/carsondarling/Ghost/blob/json-api/custom/helpers.js#L13))
 
 `cleanJSON` is a block-level helper that consumes JSON, and removes all newlines and leading whitespace. The goal is to be a quick method of saving bandwidth, while still allowing the theme to be written in a sane manner.
 
