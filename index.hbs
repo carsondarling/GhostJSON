@@ -1,0 +1,6 @@
+{{!< default}}
+{
+  "@blog": {{> "blog"}},
+  "posts": [{{#foreach posts}}{{> "post"}}{{#unless @last}},{{/unless}}{{/foreach}}],
+  "pagination": {{#pagination}}[{{> "pagination"}}]{{/pagination}}
+}

@@ -1,0 +1,17 @@
+{
+  "id": {{id}},
+  "title": "{{title}}",
+  "excerpt": "{{excerpt}}",
+  "content": "{{#safe}}{{content}}{{/safe}}",
+  "url": "{{url}}",
+  "image": {{#if image}}"{{image}}"{{else}}null{{/if}},
+  "featured": {{featured}},
+  "page": {{page}},
+  "meta_title": {{#if meta_title}}"{{meta_title}}"{{else}}null{{/if}},
+  "meta_description": {{#if meta_description}}"{{meta_description}}"{{else}}null{{/if}},
+  "published_at": "{{date published_at format="YYYY-MM-DDTHH:mm:ss.SSSZZ"}}",
+  "author": {{#author}}{{> "author"}}{{/author}},
+  "tags": [{{#foreach tags}}
+    {{> "tag"}}{{#unless @last}}, {{/unless}}
+  {{/foreach}}]
+}
